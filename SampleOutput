@@ -1,0 +1,53 @@
+  
+  Before processing :
+ +-------------------+---+----------+---------+--------------------+------+---------------+-------------------+--------------------+----------+---------+--------------------+--------------------+
+|  registration_dttm| id|first_name|last_name|               email|gender|     ip_address|                 cc|             country| birthdate|   salary|               title|            comments|
++-------------------+---+----------+---------+--------------------+------+---------------+-------------------+--------------------+----------+---------+--------------------+--------------------+
+|2016-02-03 02:55:29|  1|    Amanda|   Jordan|    ajordan0@com.com|Female|    1.197.201.2|   6759521864920116|           Indonesia|  3/8/1971| 49756.53|    Internal Auditor|               1E+02|
+|2016-02-03 12:04:03|  2|    Albert|  Freeman|     afreeman1@is.gd|  Male| 218.111.175.34|                   |              Canada| 1/16/1968|150280.17|       Accountant IV|                    |
+|2016-02-02 20:09:31|  3|    Evelyn|   Morgan|emorgan2@altervis...|Female|   7.161.136.94|   6767119071901597|              Russia|  2/1/1960|144972.51| Structural Engineer|                    |
+|2016-02-02 19:36:21|  4|    Denise|    Riley|    driley3@gmpg.org|Female|  140.35.109.83|   3576031598965625|               China|  4/8/1997| 90263.05|Senior Cost Accou...|                    |
+|2016-02-03 00:05:31|  5|    Carlos|    Burns|cburns4@miitbeian...|      | 169.113.235.40|   5602256255204850|        South Africa|          |     null|                    |                    |
+|2016-02-03 02:22:34|  6|   Kathryn|    White|  kwhite5@google.com|Female| 195.131.81.179|   3583136326049310|           Indonesia| 2/25/1983| 69227.11|   Account Executive|                    |
+|2016-02-03 03:33:08|  7|    Samuel|   Holmes|sholmes6@foxnews.com|  Male| 232.234.81.197|   3582641366974690|            Portugal|12/18/1987| 14247.62|Senior Financial ...|                    |
+|2016-02-03 01:47:06|  8|     Harry|   Howell| hhowell7@eepurl.com|  Male|   91.235.51.73|                   |Bosnia and Herzeg...|  3/1/1962|186469.43|    Web Developer IV|                    |
+|2016-02-02 22:52:53|  9|      Jose|   Foster|   jfoster8@yelp.com|  Male|   132.31.53.61|                   |         South Korea| 3/27/1992|231067.84|Software Test Eng...|               1E+02|
+|2016-02-03 13:29:47| 10|     Emily|  Stewart|estewart9@opensou...|Female| 143.28.251.245|   3574254110301671|             Nigeria| 1/28/1997| 27234.28|     Health Coach IV|                    |
+|2016-02-02 19:10:42| 11|     Susan|  Perkins| sperkinsa@patch.com|Female|    180.85.0.62|   3573823609854134|              Russia|          |210001.95|                    |                    |
+|2016-02-03 13:04:34| 12|     Alice|    Berry|aberryb@wikipedia...|Female| 246.225.12.189|   4917830851454417|               China| 8/12/1968| 22944.53|    Quality Engineer|                    |
+|2016-02-03 13:48:17| 13|    Justin|    Berry|jberryc@usatoday.com|  Male|   157.7.146.43|6331109912871813274|              Zambia| 8/15/1975| 44165.46|Structural Analys...|                    |
+|2016-02-03 16:46:52| 14|     Kathy| Reynolds|kreynoldsd@redcro...|Female|  81.254.172.13|   5537178462965976|Bosnia and Herzeg...| 6/27/1970|286592.99|           Librarian|                    |
+|2016-02-03 03:53:23| 15|   Dorothy|   Hudson|dhudsone@blogger.com|Female|       8.59.7.0|   3542586858224170|               Japan|12/20/1989|157099.71|  Nurse Practicioner|<script>alert('hi...|
+|2016-02-02 19:44:01| 16|     Bruce|   Willis|bwillisf@bluehost...|  Male|239.182.219.189|   3573030625927601|              Brazil|          |239100.65|                    |                    |
+|2016-02-02 19:57:45| 17|     Emily|  Andrews|eandrewsg@cornell...|Female| 29.231.180.172|     30271790537626|              Russia| 4/13/1990|116800.65|        Food Chemist|                    |
+|2016-02-03 11:44:24| 18|   Stephen|  Wallace|swallaceh@netvibe...|  Male|  152.49.213.62|   5433943468526428|             Ukraine| 1/15/1978|248877.99|Account Represent...|                    |
+|2016-02-03 06:45:54| 19|  Clarence|   Lawson|clawsoni@vkontakt...|  Male| 107.175.15.152|   3544052814080964|              Russia|          |177122.99|                    |                    |
+|2016-02-03 05:30:36| 20|   Rebecca|     Bell| rbellj@bandcamp.com|Female|172.215.104.127|                   |               China|          |137251.19|                    |                    |
++-------------------+---+----------+---------+--------------------+------+---------------+-------------------+--------------------+----------+---------+--------------------+--------------------+
+
+After processing:
+
++-----+----------+---------+-------------------+-------------+--------------------+--------------------+
+|index|first_name|last_name|   registration_EST|year_of_birth|             country|               email|
++-----+----------+---------+-------------------+-------------+--------------------+--------------------+
+|    1|    Amanda|   Jordan|2016-02-03 07:55:29|         1971|           Indonesia|    ajordan0@com.com|
+|    2|    Albert|  Freeman|2016-02-03 17:04:03|         1968|              Canada|     afreeman1@is.gd|
+|    3|    Evelyn|   Morgan|2016-02-03 01:09:31|         1960|              Russia|emorgan2@altervis...|
+|    4|    Denise|    Riley|2016-02-03 00:36:21|         1997|               China|    driley3@gmpg.org|
+|    5|    Carlos|    Burns|2016-02-03 05:05:31|             |        South Africa|cburns4@miitbeian...|
+|    6|   Kathryn|    White|2016-02-03 07:22:34|         1983|           Indonesia|  kwhite5@google.com|
+|    7|    Samuel|   Holmes|2016-02-03 08:33:08|         1987|            Portugal|sholmes6@foxnews.com|
+|    8|     Harry|   Howell|2016-02-03 06:47:06|         1962|Bosnia and Herzeg...| hhowell7@eepurl.com|
+|    9|      Jose|   Foster|2016-02-03 03:52:53|         1992|         South Korea|   jfoster8@yelp.com|
+|   10|     Emily|  Stewart|2016-02-03 18:29:47|         1997|             Nigeria|estewart9@opensou...|
+|   11|     Susan|  Perkins|2016-02-03 00:10:42|             |              Russia| sperkinsa@patch.com|
+|   12|     Alice|    Berry|2016-02-03 18:04:34|         1968|               China|aberryb@wikipedia...|
+|   13|    Justin|    Berry|2016-02-03 18:48:17|         1975|              Zambia|jberryc@usatoday.com|
+|   14|     Kathy| Reynolds|2016-02-03 21:46:52|         1970|Bosnia and Herzeg...|kreynoldsd@redcro...|
+|   15|   Dorothy|   Hudson|2016-02-03 08:53:23|         1989|               Japan|dhudsone@blogger.com|
+|   16|     Bruce|   Willis|2016-02-03 00:44:01|             |              Brazil|bwillisf@bluehost...|
+|   17|     Emily|  Andrews|2016-02-03 00:57:45|         1990|              Russia|eandrewsg@cornell...|
+|   18|   Stephen|  Wallace|2016-02-03 16:44:24|         1978|             Ukraine|swallaceh@netvibe...|
+|   19|  Clarence|   Lawson|2016-02-03 11:45:54|             |              Russia|clawsoni@vkontakt...|
+|   20|   Rebecca|     Bell|2016-02-03 10:30:36|             |               China| rbellj@bandcamp.com|
++-----+----------+---------+-------------------+-------------+--------------------+--------------------+
